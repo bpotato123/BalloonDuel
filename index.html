@@ -1,0 +1,2522 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <!-- =====================================================
+         SEO
+    ====================================================== -->
+
+    <title>
+        Balloon Duel - 氣球大戰 | 官方網站
+    </title>
+
+    <meta
+        name="description"
+        content="《Balloon Duel 氣球大戰》是一款刺激的空中氣球對決遊戲！操控氣球穿越天空與水面，閃避雷電、魚群與危險障礙，挑戰不同難度與極限生存對戰！"
+    >
+
+    <meta
+        name="keywords"
+        content="Balloon Duel, 氣球大戰, 氣球對決, Balloon Game, Android Game, 氣球遊戲, 空中對戰, 生存遊戲, 休閒遊戲, PVP"
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <meta
+        name="theme-color"
+        content="#0A1428"
+    >
+
+    <link
+        rel="canonical"
+        href="https://bpotato123.github.io/BalloonDuel/"
+    >
+
+
+    <!-- =====================================================
+         Google Fonts & FontAwesome
+    ====================================================== -->
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Noto+Sans+TC:wght@400;700;900&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    >
+
+
+    <!-- =====================================================
+         Favicon
+    ====================================================== -->
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="https://bpotato123.github.io/BalloonDuel/favicon.ico"
+    >
+
+    <link
+        rel="apple-touch-icon"
+        href="https://bpotato123.github.io/BalloonDuel/favicon.png"
+    >
+
+
+    <!-- =====================================================
+         Open Graph
+    ====================================================== -->
+
+    <meta
+        property="og:title"
+        content="Balloon Duel - 氣球大戰"
+    >
+
+    <meta
+        property="og:description"
+        content="操控你的氣球，在天空與水面之間展開刺激對決！閃避危險、保持飛行，挑戰你的極限！"
+    >
+
+    <meta
+        property="og:image"
+        content="https://bpotato123.github.io/BalloonDuel/banner.png"
+    >
+
+    <meta
+        property="og:image:width"
+        content="1200"
+    >
+
+    <meta
+        property="og:image:height"
+        content="630"
+    >
+
+    <meta
+        property="og:url"
+        content="https://bpotato123.github.io/BalloonDuel/"
+    >
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:site_name"
+        content="Balloon Duel - 氣球大戰"
+    >
+
+    <meta
+        property="og:locale"
+        content="zh_TW"
+    >
+
+
+    <!-- =====================================================
+         Twitter / X
+    ====================================================== -->
+
+    <meta
+        name="twitter:card"
+        content="summary_large_image"
+    >
+
+    <meta
+        name="twitter:title"
+        content="Balloon Duel - 氣球大戰"
+    >
+
+    <meta
+        name="twitter:description"
+        content="操控氣球、閃避危險、挑戰極限！《Balloon Duel 氣球大戰》即將帶你進入刺激的空中生存對決。"
+    >
+
+    <meta
+        name="twitter:image"
+        content="https://bpotato123.github.io/BalloonDuel/banner.png"
+    >
+
+
+    <!-- =====================================================
+         Schema.org
+    ====================================================== -->
+
+    <script type="application/ld+json">
+
+    {
+        "@context": "https://schema.org",
+
+        "@type": "SoftwareApplication",
+
+        "name": "Balloon Duel - 氣球大戰",
+
+        "operatingSystem": "ANDROID",
+
+        "applicationCategory": "GameApplication",
+
+        "genre": "Action / Casual / Arcade",
+
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+
+        "url": "https://play.google.com/store/apps/details?id=com.franklu.balloonduel"
+    }
+
+    </script>
+
+
+    <!-- =====================================================
+         STYLE
+    ====================================================== -->
+
+    <style>
+
+        :root {
+
+            --bg-color: #0b0f19;
+
+            --card-bg:
+                rgba(22, 28, 45, 0.82);
+
+            --primary:
+                #00f2fe;
+
+            --secondary:
+                #4facfe;
+
+            --accent:
+                #ff4ecd;
+
+            --yellow:
+                #ffd54f;
+
+            --text-main:
+                #ffffff;
+
+            --text-muted:
+                #a0aec0;
+
+        }
+
+
+        * {
+
+            margin: 0;
+
+            padding: 0;
+
+            box-sizing: border-box;
+
+            font-family:
+                'Noto Sans TC',
+                sans-serif;
+
+        }
+
+
+        html {
+
+            scroll-behavior:
+                smooth;
+
+        }
+
+
+        body {
+
+            background-color:
+                #0b0f19;
+
+            color:
+                var(--text-main);
+
+            overflow-x:
+                hidden;
+
+            min-height:
+                100vh;
+
+        }
+
+
+        /* =====================================================
+           固定背景
+        ====================================================== */
+
+        body::before {
+
+            content: "";
+
+            position: fixed;
+
+            inset: 0;
+
+            background-image:
+                url(
+                    'https://bpotato123.github.io/BalloonDuel/index_bg.png'
+                );
+
+            background-position:
+                center center;
+
+            background-repeat:
+                no-repeat;
+
+            background-size:
+                cover;
+
+            z-index:
+                -2;
+
+            pointer-events:
+                none;
+
+        }
+
+
+        /* =====================================================
+           Header
+        ====================================================== */
+
+        header {
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                center;
+
+            padding:
+                1rem 5%;
+
+            backdrop-filter:
+                blur(10px);
+
+            position:
+                fixed;
+
+            width:
+                100%;
+
+            top:
+                0;
+
+            left:
+                0;
+
+            z-index:
+                1000;
+
+            border-bottom:
+                1px solid
+                rgba(255,255,255,0.1);
+
+            background:
+                rgba(11,15,25,0.70);
+
+            box-shadow:
+                0 0 20px
+                rgba(0,242,254,0.2);
+
+            transition:
+                background 0.3s ease,
+                box-shadow 0.3s ease;
+
+        }
+
+
+        header.scrolled {
+
+            background:
+                rgba(11,15,25,0.95);
+
+            box-shadow:
+                0 0 30px
+                rgba(0,242,254,0.25);
+
+        }
+
+
+        /* =====================================================
+           Logo
+        ====================================================== */
+
+        .logo {
+
+            font-family:
+                'Orbitron',
+                sans-serif;
+
+            font-size:
+                1.7rem;
+
+            font-weight:
+                900;
+
+            background:
+                linear-gradient(
+                    45deg,
+                    var(--primary),
+                    var(--accent)
+                );
+
+            -webkit-background-clip:
+                text;
+
+            -webkit-text-fill-color:
+                transparent;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                10px;
+
+        }
+
+
+        .logo-icon {
+
+            font-size:
+                1.5rem;
+
+        }
+
+
+        /* =====================================================
+           Header Right
+        ====================================================== */
+
+        .header-right {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                12px;
+
+        }
+
+
+        .language-select {
+
+            background:
+                rgba(0,0,0,0.35);
+
+            color:
+                #fff;
+
+            border:
+                1px solid
+                rgba(0,242,254,0.5);
+
+            border-radius:
+                30px;
+
+            padding:
+                10px 14px;
+
+            outline:
+                none;
+
+            cursor:
+                pointer;
+
+            font-weight:
+                700;
+
+        }
+
+
+        .language-select option {
+
+            background:
+                #111827;
+
+            color:
+                #fff;
+
+        }
+
+
+        /* =====================================================
+           Download Button
+        ====================================================== */
+
+        .download-btn {
+
+            background:
+                linear-gradient(
+                    45deg,
+                    var(--accent),
+                    #ff7eb3
+                );
+
+            color:
+                white;
+
+            padding:
+                0.8rem 1.5rem;
+
+            border-radius:
+                50px;
+
+            text-decoration:
+                none;
+
+            font-weight:
+                bold;
+
+            box-shadow:
+                0 0 15px
+                rgba(255,78,205,0.5);
+
+            transition:
+                all 0.3s ease;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                8px;
+
+        }
+
+
+        .download-btn:hover {
+
+            transform:
+                translateY(-3px)
+                scale(1.05);
+
+            box-shadow:
+                0 0 25px
+                rgba(255,78,205,0.8);
+
+        }
+
+
+        /* =====================================================
+           Hero
+        ====================================================== */
+
+        .hero {
+
+            min-height:
+                100vh;
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+            justify-content:
+                center;
+
+            align-items:
+                center;
+
+            text-align:
+                center;
+
+            padding:
+                120px 20px 60px;
+
+            position:
+                relative;
+
+            color:
+                #fff;
+
+            background:
+                transparent;
+
+        }
+
+
+        .hero::before {
+
+            content:
+                '';
+
+            position:
+                absolute;
+
+            inset:
+                0;
+
+            background:
+                linear-gradient(
+                    180deg,
+                    rgba(11,15,25,0.65),
+                    rgba(11,15,25,0.30),
+                    rgba(11,15,25,0.88)
+                );
+
+            z-index:
+                0;
+
+        }
+
+
+        .hero::after {
+
+            content:
+                '';
+
+            position:
+                absolute;
+
+            inset:
+                0;
+
+            background:
+                radial-gradient(
+                    circle at 50% 50%,
+                    rgba(0,242,254,0.16),
+                    transparent 70%
+                );
+
+            animation:
+                pulse 6s infinite;
+
+            z-index:
+                1;
+
+            pointer-events:
+                none;
+
+        }
+
+
+        .hero > * {
+
+            position:
+                relative;
+
+            z-index:
+                2;
+
+        }
+
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+
+                opacity:
+                    0.3;
+
+            }
+
+            50% {
+
+                opacity:
+                    0.7;
+
+            }
+
+        }
+
+
+        /* =====================================================
+           Android Tag
+        ====================================================== */
+
+        .android-tag {
+
+            background:
+                rgba(0,242,254,0.1);
+
+            border:
+                1px solid
+                var(--primary);
+
+            color:
+                var(--primary);
+
+            padding:
+                7px 18px;
+
+            border-radius:
+                20px;
+
+            font-size:
+                0.9rem;
+
+            letter-spacing:
+                2px;
+
+            margin-bottom:
+                1.5rem;
+
+            font-family:
+                'Orbitron',
+                sans-serif;
+
+            box-shadow:
+                0 0 15px
+                rgba(0,242,254,0.25);
+
+        }
+
+
+        /* =====================================================
+           Hero Title
+        ====================================================== */
+
+        .hero h1 {
+
+            font-size:
+                4rem;
+
+            font-weight:
+                900;
+
+            margin-bottom:
+                1rem;
+
+            letter-spacing:
+                3px;
+
+            text-shadow:
+                0 0 20px
+                rgba(0,242,254,0.7),
+
+                0 0 50px
+                rgba(0,242,254,0.3);
+
+        }
+
+
+        .hero .subtitle {
+
+            font-family:
+                'Orbitron',
+                sans-serif;
+
+            font-size:
+                1.2rem;
+
+            font-weight:
+                800;
+
+            color:
+                var(--yellow);
+
+            letter-spacing:
+                3px;
+
+            margin-bottom:
+                1.2rem;
+
+        }
+
+
+        .hero p {
+
+            font-size:
+                1.25rem;
+
+            color:
+                #d5deeb;
+
+            max-width:
+                700px;
+
+            line-height:
+                1.8;
+
+            margin-bottom:
+                2.5rem;
+
+        }
+
+
+        /* =====================================================
+           CTA
+        ====================================================== */
+
+        .hero-cta {
+
+            display:
+                flex;
+
+            gap:
+                20px;
+
+            flex-wrap:
+                wrap;
+
+            justify-content:
+                center;
+
+        }
+
+
+        .btn-primary {
+
+            background:
+                transparent;
+
+            border:
+                2px solid
+                var(--primary);
+
+            color:
+                var(--primary);
+
+            font-weight:
+                900;
+
+            padding:
+                1rem 2.5rem;
+
+            border-radius:
+                12px;
+
+            text-decoration:
+                none;
+
+            font-size:
+                1.1rem;
+
+            box-shadow:
+                0 0 15px
+                rgba(0,242,254,0.4);
+
+            transition:
+                all 0.3s ease;
+
+        }
+
+
+        .btn-primary:hover {
+
+            background:
+                var(--primary);
+
+            color:
+                #000;
+
+            transform:
+                translateY(-3px);
+
+            box-shadow:
+                0 0 30px
+                rgba(0,242,254,0.8);
+
+        }
+
+
+        /* =====================================================
+           Features
+        ====================================================== */
+
+        .features {
+
+            padding:
+                90px 5%;
+
+            max-width:
+                1200px;
+
+            margin:
+                0 auto;
+
+        }
+
+
+        .section-title {
+
+            text-align:
+                center;
+
+            font-size:
+                2.5rem;
+
+            margin-bottom:
+                3rem;
+
+            font-family:
+                'Orbitron',
+                sans-serif;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #fff,
+                    var(--text-muted)
+                );
+
+            -webkit-background-clip:
+                text;
+
+            -webkit-text-fill-color:
+                transparent;
+
+        }
+
+
+        .grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(
+                    auto-fit,
+                    minmax(280px,1fr)
+                );
+
+            gap:
+                30px;
+
+        }
+
+
+        .card {
+
+            background:
+                var(--card-bg);
+
+            border:
+                1px solid
+                rgba(255,255,255,0.05);
+
+            border-radius:
+                20px;
+
+            padding:
+                2.5rem 2rem;
+
+            text-align:
+                center;
+
+            position:
+                relative;
+
+            overflow:
+                hidden;
+
+            backdrop-filter:
+                blur(10px);
+
+            transition:
+                all 0.4s ease;
+
+        }
+
+
+        .card:hover {
+
+            transform:
+                translateY(-10px);
+
+            border-color:
+                var(--primary);
+
+            box-shadow:
+                0 10px 30px
+                rgba(0,242,254,0.2);
+
+        }
+
+
+        .card-icon {
+
+            font-size:
+                3rem;
+
+            margin-bottom:
+                1.5rem;
+
+            background:
+                linear-gradient(
+                    45deg,
+                    var(--primary),
+                    var(--accent)
+                );
+
+            -webkit-background-clip:
+                text;
+
+            -webkit-text-fill-color:
+                transparent;
+
+        }
+
+
+        .card h3 {
+
+            font-size:
+                1.5rem;
+
+            margin-bottom:
+                0.8rem;
+
+        }
+
+
+        .card p {
+
+            color:
+                var(--text-muted);
+
+            font-size:
+                0.95rem;
+
+            line-height:
+                1.7;
+
+        }
+
+
+        /* =====================================================
+           Extra Features
+        ====================================================== */
+
+        .extra-features {
+
+            background:
+                linear-gradient(
+                    180deg,
+                    transparent,
+                    rgba(22,28,45,0.5),
+                    transparent
+                );
+
+            padding:
+                80px 5%;
+
+            text-align:
+                center;
+
+        }
+
+
+        .extra-flex {
+
+            display:
+                flex;
+
+            justify-content:
+                center;
+
+            gap:
+                40px;
+
+            flex-wrap:
+                wrap;
+
+            max-width:
+                1000px;
+
+            margin:
+                0 auto;
+
+        }
+
+
+        .extra-box {
+
+            flex:
+                1;
+
+            min-width:
+                280px;
+
+            background:
+                var(--card-bg);
+
+            padding:
+                2rem;
+
+            border-radius:
+                16px;
+
+            border-left:
+                4px solid
+                var(--accent);
+
+            text-align:
+                left;
+
+        }
+
+
+        .extra-box h4 {
+
+            font-size:
+                1.3rem;
+
+            margin-bottom:
+                0.5rem;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                10px;
+
+        }
+
+
+        .extra-box p {
+
+            color:
+                var(--text-muted);
+
+            line-height:
+                1.7;
+
+        }
+
+
+        /* =====================================================
+           Google Play
+        ====================================================== */
+
+        .download-section {
+
+            text-align:
+                center;
+
+            padding:
+                80px 20px;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(0,242,254,0.12),
+                    transparent 65%
+                );
+
+        }
+
+
+        .download-section h2 {
+
+            font-size:
+                2.3rem;
+
+            margin-bottom:
+                1rem;
+
+        }
+
+
+        .download-section p {
+
+            color:
+                var(--text-muted);
+
+            margin-bottom:
+                2rem;
+
+        }
+
+
+        .google-play-btn {
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            gap:
+                12px;
+
+            background:
+                #ffffff;
+
+            color:
+                #111;
+
+            padding:
+                14px 24px;
+
+            border-radius:
+                12px;
+
+            text-decoration:
+                none;
+
+            font-weight:
+                900;
+
+            transition:
+                all 0.3s ease;
+
+            box-shadow:
+                0 0 25px
+                rgba(255,255,255,0.15);
+
+        }
+
+
+        .google-play-btn i {
+
+            font-size:
+                1.7rem;
+
+        }
+
+
+        .google-play-btn:hover {
+
+            transform:
+                translateY(-4px)
+                scale(1.03);
+
+            box-shadow:
+                0 0 35px
+                rgba(0,242,254,0.45);
+
+        }
+
+
+        /* =====================================================
+           Footer
+        ====================================================== */
+
+        footer {
+
+            padding:
+                40px 5%;
+
+            text-align:
+                center;
+
+            border-top:
+                1px solid
+                rgba(255,255,255,0.05);
+
+            color:
+                var(--text-muted);
+
+            font-size:
+                0.9rem;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #0b0f19,
+                    #001f3f
+                );
+
+            position:
+                relative;
+
+            overflow:
+                hidden;
+
+        }
+
+
+        footer::before {
+
+            content:
+                '';
+
+            position:
+                absolute;
+
+            top:
+                0;
+
+            left:
+                -100%;
+
+            width:
+                200%;
+
+            height:
+                2px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    transparent,
+                    var(--primary),
+                    transparent
+                );
+
+            animation:
+                energyFlow 4s linear infinite;
+
+        }
+
+
+        @keyframes energyFlow {
+
+            0% {
+
+                left:
+                    -100%;
+
+            }
+
+            100% {
+
+                left:
+                    100%;
+
+            }
+
+        }
+
+
+        /* =====================================================
+           Mobile
+        ====================================================== */
+
+        @media (max-width:768px) {
+
+            header {
+
+                padding:
+                    0.8rem 4%;
+
+            }
+
+
+            .logo {
+
+                font-size:
+                    1.15rem;
+
+            }
+
+
+            .header-right {
+
+                gap:
+                    6px;
+
+            }
+
+
+            .language-select {
+
+                padding:
+                    8px;
+
+                font-size:
+                    0.75rem;
+
+                max-width:
+                    95px;
+
+            }
+
+
+            .download-btn {
+
+                padding:
+                    0.6rem 0.9rem;
+
+                font-size:
+                    0.75rem;
+
+            }
+
+
+            .hero h1 {
+
+                font-size:
+                    2.8rem;
+
+            }
+
+
+            .hero .subtitle {
+
+                font-size:
+                    0.9rem;
+
+                letter-spacing:
+                    2px;
+
+            }
+
+
+            .hero p {
+
+                font-size:
+                    1rem;
+
+                line-height:
+                    1.7;
+
+            }
+
+
+            .section-title {
+
+                font-size:
+                    2rem;
+
+            }
+
+
+            .download-section h2 {
+
+                font-size:
+                    1.8rem;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     Header
+========================================================= -->
+
+<header id="header">
+
+    <div class="logo">
+
+        <span class="logo-icon">
+            🎈
+        </span>
+
+        <span>
+            Balloon Duel
+        </span>
+
+    </div>
+
+
+    <div class="header-right">
+
+        <select
+            id="languageSelect"
+            class="language-select"
+            aria-label="Language"
+        >
+
+            <option value="zh-TW">
+                繁體中文
+            </option>
+
+            <option value="zh-CN">
+                简体中文
+            </option>
+
+            <option value="en">
+                English
+            </option>
+
+            <option value="ja">
+                日本語
+            </option>
+
+            <option value="ko">
+                한국어
+            </option>
+
+            <option value="es">
+                Español
+            </option>
+
+        </select>
+
+
+        <a
+            href="https://play.google.com/store/apps/details?id=com.franklu.balloonduel"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="download-btn"
+        >
+
+            <i class="fa-brands fa-google-play"></i>
+
+            <span data-i18n="download">
+                免費下載
+            </span>
+
+        </a>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     Hero
+========================================================= -->
+
+<section class="hero">
+
+
+    <div class="android-tag">
+
+        <i class="fa-brands fa-android"></i>
+
+        <span data-i18n="androidExclusive">
+            ANDROID 獨佔登場
+        </span>
+
+    </div>
+
+
+    <h1 data-i18n="heroTitle">
+
+        Balloon Duel
+
+    </h1>
+
+
+    <div class="subtitle">
+
+        <span data-i18n="heroSubtitle">
+            氣球大戰
+        </span>
+
+    </div>
+
+
+    <p data-i18n="heroDescription">
+
+        操控你的氣球飛向天空，
+        閃避危險、穿越水面，
+        在刺激的空中對決中挑戰你的極限！
+
+    </p>
+
+
+    <div class="hero-cta">
+
+        <a
+            href="https://play.google.com/store/apps/details?id=com.franklu.balloonduel"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-primary"
+        >
+
+            <i class="fa-brands fa-google-play"></i>
+
+            <span data-i18n="startChallenge">
+                立即開始遊戲
+            </span>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     Core Game Modes
+========================================================= -->
+
+<section class="features">
+
+
+    <h2
+        class="section-title"
+        data-i18n="gameModes"
+    >
+
+        遊戲特色
+
+    </h2>
+
+
+    <div class="grid">
+
+
+        <!-- Mode 1 -->
+
+        <div class="card">
+
+            <div class="card-icon">
+
+                <i class="fa-solid fa-wind"></i>
+
+            </div>
+
+
+            <h3 data-i18n="mode1Title">
+
+                氣球飛行
+
+            </h3>
+
+
+            <p data-i18n="mode1Description">
+
+                操控氣球在天空中自由飛行，
+                掌握上升、下降與方向，
+                小心不要落入危險水域！
+
+            </p>
+
+        </div>
+
+
+
+        <!-- Mode 2 -->
+
+        <div class="card">
+
+            <div class="card-icon">
+
+                <i class="fa-solid fa-cloud-bolt"></i>
+
+            </div>
+
+
+            <h3 data-i18n="mode2Title">
+
+                雷電風暴
+
+            </h3>
+
+
+            <p data-i18n="mode2Description">
+
+                小心天空中的雷電風暴！
+                觀察警告訊號，
+                抓準時機閃避致命雷擊。
+
+            </p>
+
+        </div>
+
+
+
+        <!-- Mode 3 -->
+
+        <div class="card">
+
+            <div class="card-icon">
+
+                <i class="fa-solid fa-fish"></i>
+
+            </div>
+
+
+            <h3 data-i18n="mode3Title">
+
+                危險水域
+
+            </h3>
+
+
+            <p data-i18n="mode3Description">
+
+                水面下暗藏危機！
+                避開突然出現的魚群，
+                保護你的氣球與生命。
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     Extra Features
+========================================================= -->
+
+<section class="extra-features">
+
+
+    <div class="extra-flex">
+
+
+        <!-- Difficulty -->
+
+        <div class="extra-box">
+
+            <h4>
+
+                <i
+                    class="fa-solid fa-gauge-high"
+                    style="color:#ffd700;"
+                ></i>
+
+
+                <span data-i18n="difficultyTitle">
+
+                    多種難度挑戰
+
+                </span>
+
+            </h4>
+
+
+            <p data-i18n="difficultyDescription">
+
+                從輕鬆的 Normal 到更加刺激的 Hard，
+                不同難度帶來不同的風暴與危險，
+                挑戰你的飛行技巧與反應能力。
+
+            </p>
+
+        </div>
+
+
+
+        <!-- Survival -->
+
+        <div class="extra-box">
+
+            <h4>
+
+                <i
+                    class="fa-solid fa-heart"
+                    style="color:var(--accent);"
+                ></i>
+
+
+                <span data-i18n="survivalTitle">
+
+                    三條生命
+
+                </span>
+
+            </h4>
+
+
+            <p data-i18n="survivalDescription">
+
+                三條生命、三次機會。
+                氣球破掉不代表結束，
+                抓住機會重新起飛並完成這場對決！
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     Google Play
+========================================================= -->
+
+<section class="download-section">
+
+
+    <h2 data-i18n="downloadTitle">
+
+        準備好起飛了嗎？
+
+    </h2>
+
+
+    <p data-i18n="downloadDescription">
+
+        立即從 Google Play 免費下載
+        《Balloon Duel 氣球大戰》
+
+    </p>
+
+
+    <a
+        href="https://play.google.com/store/apps/details?id=com.franklu.balloonduel"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="google-play-btn"
+    >
+
+        <i class="fa-brands fa-google-play"></i>
+
+        <span data-i18n="googlePlayDownload">
+
+            Google Play 免費下載
+
+        </span>
+
+    </a>
+
+</section>
+
+
+
+<!-- =========================================================
+     Footer
+========================================================= -->
+
+<footer>
+
+
+    <p>
+
+        © 2026
+
+        <span data-i18n="gameName">
+
+            Balloon Duel - 氣球大戰
+
+        </span>
+
+        .
+
+        <span data-i18n="allRights">
+
+            All Rights Reserved.
+
+        </span>
+
+    </p>
+
+
+    <p
+        style="margin-top:5px;opacity:0.6;"
+        data-i18n="footerText"
+    >
+
+        飛得更高，活得更久！
+
+    </p>
+
+
+</footer>
+
+
+
+<!-- =========================================================
+     Multi-language System
+========================================================= -->
+
+<script>
+
+
+const translations = {
+
+
+    /* =====================================================
+       Traditional Chinese
+    ====================================================== */
+
+    "zh-TW": {
+
+        gameName:
+            "Balloon Duel - 氣球大戰",
+
+        download:
+            "免費下載",
+
+        androidExclusive:
+            "ANDROID 獨佔登場",
+
+        heroTitle:
+            "Balloon Duel",
+
+        heroSubtitle:
+            "氣球大戰",
+
+        heroDescription:
+            "操控你的氣球飛向天空，閃避危險、穿越水面，在刺激的空中對決中挑戰你的極限！",
+
+        startChallenge:
+            "立即開始遊戲",
+
+        gameModes:
+            "遊戲特色",
+
+        mode1Title:
+            "氣球飛行",
+
+        mode1Description:
+            "操控氣球在天空中自由飛行，掌握上升、下降與方向，小心不要落入危險水域！",
+
+        mode2Title:
+            "雷電風暴",
+
+        mode2Description:
+            "小心天空中的雷電風暴！觀察警告訊號，抓準時機閃避致命雷擊。",
+
+        mode3Title:
+            "危險水域",
+
+        mode3Description:
+            "水面下暗藏危機！避開突然出現的魚群，保護你的氣球與生命。",
+
+        difficultyTitle:
+            "多種難度挑戰",
+
+        difficultyDescription:
+            "從輕鬆的 Normal 到更加刺激的 Hard，不同難度帶來不同的風暴與危險，挑戰你的飛行技巧與反應能力。",
+
+        survivalTitle:
+            "三條生命",
+
+        survivalDescription:
+            "三條生命、三次機會。氣球破掉不代表結束，抓住機會重新起飛並完成這場對決！",
+
+        downloadTitle:
+            "準備好起飛了嗎？",
+
+        downloadDescription:
+            "立即從 Google Play 免費下載《Balloon Duel 氣球大戰》",
+
+        googlePlayDownload:
+            "Google Play 免費下載",
+
+        allRights:
+            "All Rights Reserved.",
+
+        footerText:
+            "飛得更高，活得更久！"
+
+    },
+
+
+    /* =====================================================
+       Simplified Chinese
+    ====================================================== */
+
+    "zh-CN": {
+
+        gameName:
+            "Balloon Duel - 气球大战",
+
+        download:
+            "免费下载",
+
+        androidExclusive:
+            "ANDROID 独家登场",
+
+        heroTitle:
+            "Balloon Duel",
+
+        heroSubtitle:
+            "气球大战",
+
+        heroDescription:
+            "操控你的气球飞向天空，躲避危险、穿越水面，在刺激的空中对决中挑战你的极限！",
+
+        startChallenge:
+            "立即开始游戏",
+
+        gameModes:
+            "游戏特色",
+
+        mode1Title:
+            "气球飞行",
+
+        mode1Description:
+            "操控气球在天空中自由飞行，掌握上升、下降与方向，小心不要落入危险水域！",
+
+        mode2Title:
+            "雷电风暴",
+
+        mode2Description:
+            "小心天空中的雷电风暴！观察警告信号，抓准时机躲避致命雷击。",
+
+        mode3Title:
+            "危险水域",
+
+        mode3Description:
+            "水面下暗藏危机！避开突然出现的鱼群，保护你的气球与生命。",
+
+        difficultyTitle:
+            "多种难度挑战",
+
+        difficultyDescription:
+            "从轻松的 Normal 到更加刺激的 Hard，不同难度带来不同的风暴与危险，挑战你的飞行技巧与反应能力。",
+
+        survivalTitle:
+            "三条生命",
+
+        survivalDescription:
+            "三条生命、三次机会。气球破掉不代表结束，抓住机会重新起飞并完成这场对决！",
+
+        downloadTitle:
+            "准备好起飞了吗？",
+
+        downloadDescription:
+            "立即从 Google Play 免费下载《Balloon Duel 气球大战》",
+
+        googlePlayDownload:
+            "Google Play 免费下载",
+
+        allRights:
+            "保留所有权利。",
+
+        footerText:
+            "飞得更高，活得更久！"
+
+    },
+
+
+    /* =====================================================
+       English
+    ====================================================== */
+
+    "en": {
+
+        gameName:
+            "Balloon Duel",
+
+        download:
+            "DOWNLOAD",
+
+        androidExclusive:
+            "ANDROID EXCLUSIVE",
+
+        heroTitle:
+            "Balloon Duel",
+
+        heroSubtitle:
+            "BATTLE IN THE SKY",
+
+        heroDescription:
+            "Take control of your balloon, fly through the sky, dodge deadly hazards, and survive the ultimate aerial challenge!",
+
+        startChallenge:
+            "START GAME",
+
+        gameModes:
+            "GAME FEATURES",
+
+        mode1Title:
+            "Balloon Flight",
+
+        mode1Description:
+            "Control your balloon through the sky. Master your movement, rise and fall, and stay away from dangerous waters.",
+
+        mode2Title:
+            "Lightning Storm",
+
+        mode2Description:
+            "Watch out for deadly lightning storms! Read the warning signs and time your movement to avoid the strikes.",
+
+        mode3Title:
+            "Dangerous Waters",
+
+        mode3Description:
+            "The water hides dangerous creatures. Avoid sudden attacks and protect your balloon and remaining lives.",
+
+        difficultyTitle:
+            "Multiple Difficulties",
+
+        difficultyDescription:
+            "From relaxed Normal mode to intense Hard mode, each difficulty brings new storms and hazards to test your flying skills.",
+
+        survivalTitle:
+            "Three Lives",
+
+        survivalDescription:
+            "Three lives, three chances. A popped balloon is not the end. Get back in the air and fight your way to victory!",
+
+        downloadTitle:
+            "READY TO TAKE OFF?",
+
+        downloadDescription:
+            "Download Balloon Duel FREE on Google Play.",
+
+        googlePlayDownload:
+            "FREE ON GOOGLE PLAY",
+
+        allRights:
+            "All Rights Reserved.",
+
+        footerText:
+            "Fly higher. Survive longer!"
+
+    },
+
+
+    /* =====================================================
+       Japanese
+    ====================================================== */
+
+    "ja": {
+
+        gameName:
+            "Balloon Duel - 気球大戦",
+
+        download:
+            "無料ダウンロード",
+
+        androidExclusive:
+            "ANDROID 専用",
+
+        heroTitle:
+            "Balloon Duel",
+
+        heroSubtitle:
+            "気球大戦",
+
+        heroDescription:
+            "気球を操って空を飛び、危険をかわしながら水上を進もう。究極の空中チャレンジに挑戦！",
+
+        startChallenge:
+            "今すぐプレイ",
+
+        gameModes:
+            "ゲームの特徴",
+
+        mode1Title:
+            "気球フライト",
+
+        mode1Description:
+            "気球を自由に操って空を飛ぼう。上昇・下降・方向転換を駆使して危険な水域を避けよう！",
+
+        mode2Title:
+            "雷の嵐",
+
+        mode2Description:
+            "危険な雷に注意！警告を確認し、タイミングを見極めて雷撃を回避しよう。",
+
+        mode3Title:
+            "危険な水域",
+
+        mode3Description:
+            "水面には危険が潜んでいます。突然現れる魚を避けて、気球とライフを守ろう！",
+
+        difficultyTitle:
+            "多彩な難易度",
+
+        difficultyDescription:
+            "NormalからHardまで、難易度によって嵐や危険が変化。飛行テクニックと反射神経を試そう！",
+
+        survivalTitle:
+            "3つのライフ",
+
+        survivalDescription:
+            "3つのライフ、3回のチャンス。気球が割れても終わりではありません。再び空へ飛び立とう！",
+
+        downloadTitle:
+            "空へ飛び立つ準備はできた？",
+
+        downloadDescription:
+            "Google Playから『Balloon Duel』を無料でダウンロード！",
+
+        googlePlayDownload:
+            "Google Playで無料ダウンロード",
+
+        allRights:
+            "All Rights Reserved.",
+
+        footerText:
+            "もっと高く、もっと長く飛ぼう！"
+
+    },
+
+
+    /* =====================================================
+       Korean
+    ====================================================== */
+
+    "ko": {
+
+        gameName:
+            "Balloon Duel - 풍선 대전",
+
+        download:
+            "무료 다운로드",
+
+        androidExclusive:
+            "ANDROID 독점 출시",
+
+        heroTitle:
+            "Balloon Duel",
+
+        heroSubtitle:
+            "풍선 대전",
+
+        heroDescription:
+            "풍선을 조종해 하늘을 날아보세요. 위험을 피하고 물 위를 통과하며 최고의 공중 도전에 도전하세요!",
+
+        startChallenge:
+            "게임 시작",
+
+        gameModes:
+            "게임 특징",
+
+        mode1Title:
+            "풍선 비행",
+
+        mode1Description:
+            "풍선을 조종해 하늘을 자유롭게 날아보세요. 상승과 하강을 조절하고 위험한 물을 피하세요.",
+
+        mode2Title:
+            "번개 폭풍",
+
+        mode2Description:
+            "강력한 번개 폭풍을 조심하세요! 경고 신호를 확인하고 타이밍을 맞춰 번개를 피하세요.",
+
+        mode3Title:
+            "위험한 수역",
+
+        mode3Description:
+            "물속에는 위험이 숨어 있습니다. 갑자기 나타나는 물고기를 피하고 풍선과 생명을 지켜주세요.",
+
+        difficultyTitle:
+            "다양한 난이도",
+
+        difficultyDescription:
+            "Normal부터 Hard까지 다양한 난이도를 즐겨보세요. 더욱 강력한 폭풍과 위험이 기다리고 있습니다.",
+
+        survivalTitle:
+            "3개의 생명",
+
+        survivalDescription:
+            "세 번의 기회가 있습니다. 풍선이 터져도 끝이 아닙니다. 다시 하늘로 올라가 도전을 이어가세요!",
+
+        downloadTitle:
+            "하늘로 날아오를 준비가 되었나요?",
+
+        downloadDescription:
+            "Google Play에서 Balloon Duel을 무료로 다운로드하세요.",
+
+        googlePlayDownload:
+            "Google Play 무료 다운로드",
+
+        allRights:
+            "All Rights Reserved.",
+
+        footerText:
+            "더 높이 날고, 더 오래 살아남으세요!"
+
+    },
+
+
+    /* =====================================================
+       Spanish
+    ====================================================== */
+
+    "es": {
+
+        gameName:
+            "Balloon Duel",
+
+        download:
+            "DESCARGA GRATIS",
+
+        androidExclusive:
+            "EXCLUSIVO PARA ANDROID",
+
+        heroTitle:
+            "Balloon Duel",
+
+        heroSubtitle:
+            "BATALLA DE GLOBOS",
+
+        heroDescription:
+            "Controla tu globo, vuela por el cielo, esquiva peligros y supera el desafío aéreo definitivo.",
+
+        startChallenge:
+            "COMENZAR JUEGO",
+
+        gameModes:
+            "CARACTERÍSTICAS",
+
+        mode1Title:
+            "Vuelo en Globo",
+
+        mode1Description:
+            "Controla tu globo por el cielo. Domina el movimiento, sube y baja, y evita las aguas peligrosas.",
+
+        mode2Title:
+            "Tormenta Eléctrica",
+
+        mode2Description:
+            "¡Cuidado con los rayos! Observa las señales de advertencia y esquiva los ataques en el momento adecuado.",
+
+        mode3Title:
+            "Aguas Peligrosas",
+
+        mode3Description:
+            "El agua esconde peligros. Evita los peces que aparecen de repente y protege tu globo y tus vidas.",
+
+        difficultyTitle:
+            "Múltiples Dificultades",
+
+        difficultyDescription:
+            "Desde Normal hasta el intenso modo Hard. Cada dificultad trae nuevas tormentas y peligros.",
+
+        survivalTitle:
+            "Tres Vidas",
+
+        survivalDescription:
+            "Tres vidas, tres oportunidades. Si tu globo explota, no todo termina. ¡Vuelve al cielo y continúa la batalla!",
+
+        downloadTitle:
+            "¿LISTO PARA DESPEGAR?",
+
+        downloadDescription:
+            "Descarga Balloon Duel GRATIS desde Google Play.",
+
+        googlePlayDownload:
+            "DESCARGAR GRATIS EN GOOGLE PLAY",
+
+        allRights:
+            "Todos los derechos reservados.",
+
+        footerText:
+            "¡Vuela más alto y sobrevive más tiempo!"
+
+    }
+
+};
+
+
+
+/* =========================================================
+   Language Apply
+========================================================= */
+
+function setLanguage(language) {
+
+    const dictionary =
+        translations[language] ||
+        translations["zh-TW"];
+
+
+    document
+        .querySelectorAll("[data-i18n]")
+        .forEach(element => {
+
+            const key =
+                element.getAttribute("data-i18n");
+
+            if (
+                dictionary[key] !== undefined
+            ) {
+
+                element.textContent =
+                    dictionary[key];
+
+            }
+
+        });
+
+
+    document.documentElement.lang =
+        language;
+
+
+    localStorage.setItem(
+        "balloonDuelLanguage",
+        language
+    );
+
+}
+
+
+
+/* =========================================================
+   Language Selector
+========================================================= */
+
+const languageSelect =
+    document.getElementById(
+        "languageSelect"
+    );
+
+
+const savedLanguage =
+    localStorage.getItem(
+        "balloonDuelLanguage"
+    );
+
+
+if (
+    savedLanguage &&
+    translations[savedLanguage]
+) {
+
+    languageSelect.value =
+        savedLanguage;
+
+    setLanguage(
+        savedLanguage
+    );
+
+} else {
+
+
+    const browserLanguage =
+        navigator.language;
+
+
+    let detectedLanguage =
+        "en";
+
+
+    if (
+        browserLanguage === "zh-TW" ||
+        browserLanguage === "zh-Hant"
+    ) {
+
+        detectedLanguage =
+            "zh-TW";
+
+    }
+
+    else if (
+        browserLanguage.startsWith("zh")
+    ) {
+
+        detectedLanguage =
+            "zh-CN";
+
+    }
+
+    else if (
+        browserLanguage.startsWith("ja")
+    ) {
+
+        detectedLanguage =
+            "ja";
+
+    }
+
+    else if (
+        browserLanguage.startsWith("ko")
+    ) {
+
+        detectedLanguage =
+            "ko";
+
+    }
+
+    else if (
+        browserLanguage.startsWith("es")
+    ) {
+
+        detectedLanguage =
+            "es";
+
+    }
+
+    else {
+
+        detectedLanguage =
+            "en";
+
+    }
+
+
+    languageSelect.value =
+        detectedLanguage;
+
+
+    setLanguage(
+        detectedLanguage
+    );
+
+}
+
+
+
+/* =========================================================
+   Language Change
+========================================================= */
+
+languageSelect.addEventListener(
+    "change",
+    function () {
+
+        setLanguage(
+            this.value
+        );
+
+    }
+);
+
+
+
+/* =========================================================
+   Header Scroll Effect
+========================================================= */
+
+window.addEventListener(
+    "scroll",
+    function () {
+
+        const header =
+            document.getElementById(
+                "header"
+            );
+
+
+        if (
+            window.scrollY > 30
+        ) {
+
+            header.classList.add(
+                "scrolled"
+            );
+
+        }
+
+        else {
+
+            header.classList.remove(
+                "scrolled"
+            );
+
+        }
+
+    }
+);
+
+
+</script>
+
+
+</body>
+
+</html>
